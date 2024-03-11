@@ -29,6 +29,7 @@ void v_process_rep_frame(stru_frame_t *stru_frame_in)
 	uint8_t au8_frame_out[FRAME_MAX_SIZE];
 	v_frame_build(stru_frame_in, FRAME_TYPE_ACK_NEXT, au8_frame_out);
 	v_lora_send_frame(u8_addr_high, u8_addr_next, u8_addr_channel, au8_frame_out, FRAME_ACK_SIZE);
+	if (b_is_end_node(stru_frame_in->u8_routing_val)) stru_frame_in->u32_state_val = 0x00;
 	v_frame_build(stru_frame_in, FRAME_TYPE_REP, au8_frame_out);
 	v_lora_send_frame(u8_addr_high, u8_addr_prev, u8_addr_channel, au8_frame_out, FRAME_CTR_SIZE);
 	v_timer_reset();

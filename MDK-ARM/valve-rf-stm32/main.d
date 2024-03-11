@@ -32,9 +32,7 @@ valve-rf-stm32\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.
 valve-rf-stm32\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 valve-rf-stm32\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 valve-rf-stm32\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-valve-rf-stm32\main.o: ../Core/Inc/frame.h
 valve-rf-stm32\main.o: ../Core/Inc/addr.h
 valve-rf-stm32\main.o: ../Core/Inc/lora.h
-valve-rf-stm32\main.o: ../Core/Inc/valve.h
-valve-rf-stm32\main.o: ../Core/Inc/flash.h
 valve-rf-stm32\main.o: ../Core/Inc/process.h
+valve-rf-stm32\main.o: ../Core/Inc/frame.h

@@ -22,9 +22,9 @@
 #include "lora.h"
 #include "process.h"
 
-// TODO: 	Check rep frame build
-// 				Add update routing function when timeout 
-//				Fix bug toggle valve when turn off from MQTT client
+// TODO: 	Check rep frame build																		DONE       
+// 				Add update routing function when timeout               	DONE
+//				Fix bug toggle valve when turn off from MQTT client			
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */

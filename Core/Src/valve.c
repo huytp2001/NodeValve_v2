@@ -3,7 +3,7 @@
 #include "flash.h"
 
 static uint8_t u8_valve_get_new_state(uint32_t u32_state_val);
-static uint8_t u8_valve_get_state(void);
+uint8_t u8_valve_get_state(void);
 static void v_valve_control_port(uint8_t u8_port, uint8_t u8_state);
 
 bool b_valve_check(uint8_t u8_en_state_val)
@@ -20,7 +20,7 @@ static uint8_t u8_valve_get_new_state(uint32_t u32_state_val)
 	return u32_state_val >> 4*(u8_addr_low - 1);
 }
 
-static uint8_t u8_valve_get_state(void)
+uint8_t u8_valve_get_state(void)
 {
 	uint8_t u8_curr_state = 0x00;
 	if (HAL_GPIO_ReadPin(LED1_GPIO_Port, LED1_Pin)) u8_curr_state |= 0x01;

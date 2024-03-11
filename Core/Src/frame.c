@@ -76,6 +76,7 @@ void v_frame_build(stru_frame_t *stru_frame_in, e_frame_type_t e_frame_type, uin
 			au8_frame_out[3] = u8_addr_next;
 			au8_frame_out[5] = stru_frame_in->u8_routing_val;
 			au8_frame_out[6] = stru_frame_in->u8_en_state_val;
+			stru_frame_in->u32_state_val |= (uint32_t)((u8_valve_get_state()) << 4 * (u8_addr_low - 1));
 			au8_frame_out[7] = (uint8_t)(stru_frame_in->u32_state_val>>24)&0xFF;
 			au8_frame_out[8] = (uint8_t)(stru_frame_in->u32_state_val>>16)&0xFF;
 			au8_frame_out[9] = (uint8_t)(stru_frame_in->u32_state_val>>8)&0xFF;
@@ -88,6 +89,7 @@ void v_frame_build(stru_frame_t *stru_frame_in, e_frame_type_t e_frame_type, uin
 			au8_frame_out[3] = u8_addr_prev;
 			au8_frame_out[5] = stru_frame_in->u8_routing_val;
 			au8_frame_out[6] = stru_frame_in->u8_battery_val | (0x01 << (u8_addr_low - 1));
+			
 			au8_frame_out[7] = (uint8_t)(stru_frame_in->u32_state_val>>24)&0xFF;
 			au8_frame_out[8] = (uint8_t)(stru_frame_in->u32_state_val>>16)&0xFF;
 			au8_frame_out[9] = (uint8_t)(stru_frame_in->u32_state_val>>8)&0xFF;
